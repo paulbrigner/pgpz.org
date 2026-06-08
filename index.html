@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
+  <title>PGP* for Zcash</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            'brand-navy': '#0b0b43',
+            'brand-denim': '#4377f3',
+            'brand-lavender': '#62608c',
+            'brand-cloud': '#c1c5e2',
+            'brand-ice': '#fafafc',
+            'zcash-gold': '#F5A800',
+            'ink': '#14142f',
+            'muted': '#4d4f6d'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-sheen {
+      background: radial-gradient(circle at 22% 18%, rgba(245, 168, 0, 0.32), transparent 42%),
+                  radial-gradient(circle at 80% -12%, rgba(67, 119, 243, 0.36), transparent 44%),
+                  #121259;
+    }
+    .section-eyebrow {
+      letter-spacing: 0.3em;
+    }
+    .hero-title-main {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.28em;
+      font-size: 2.5rem;
+      letter-spacing: normal;
+      line-height: 1.05;
+    }
+    .hero-title-star {
+      letter-spacing: normal;
+      margin-left: -0.16em;
+      color: #F5A800;
+      vertical-align: super;
+      font-size: 0.62em;
+      line-height: 0;
+    }
+    .hero-title-sub {
+      display: block;
+      margin-top: 0.35rem;
+      font-size: 1.5rem;
+      letter-spacing: normal;
+    }
+    @media (min-width: 768px) {
+      .hero-title-main {
+        font-size: 3.5rem;
+        gap: 0.32em;
+      }
+      .hero-title-sub {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body class="bg-brand-ice text-ink antialiased">
+  <main>
+    <section class="hero-sheen min-h-screen overflow-hidden text-white">
+      <div class="mx-auto flex min-h-screen max-w-6xl flex-col justify-between px-6 py-8 md:py-10">
+        <header class="flex items-center justify-between">
+          <a href="/" class="flex items-center text-xl font-bold text-white">
+            <img src="pgp_profile_image.png" alt="PGP* for Zcash" class="mr-3 h-10 w-10 rounded-full border border-white/30 object-cover"/>
+            <span>PGP<sup>*</sup></span>
+          </a>
+          <a href="https://pgpforcrypto.org" class="hidden text-sm font-semibold uppercase tracking-[0.2em] text-brand-cloud transition hover:text-white sm:inline-flex">PGP* for Crypto Archive</a>
+        </header>
+
+        <div class="grid gap-12 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center">
+          <div class="max-w-3xl">
+            <p class="section-eyebrow text-xs font-semibold uppercase text-brand-cloud/80">Pretty Good Policy for Zcash</p>
+            <h1 class="mt-5 font-extrabold leading-tight">
+              <span class="hero-title-main"><span>P</span><span>G</span><span>P</span><sup class="hero-title-star">*</sup></span>
+              <span class="hero-title-sub">(Pretty Good Policy) for Zcash</span>
+            </h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-brand-cloud md:text-xl">A Washington, D.C. policy initiative focused on privacy-preserving digital cash, practical compliance, and the public-interest role of Zcash.</p>
+            <div class="mt-10 inline-flex rounded-full border border-zcash-gold/60 bg-zcash-gold px-6 py-3 text-sm font-extrabold uppercase tracking-[0.2em] text-brand-navy shadow-xl shadow-brand-navy/30">Coming Soon</div>
+          </div>
+
+          <div class="rounded-2xl border border-white/15 bg-white/10 p-8 shadow-2xl shadow-brand-navy/30 backdrop-blur">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-zcash-gold">New Initiative</p>
+            <p class="mt-4 text-lg leading-8 text-brand-cloud">PGP<sup>*</sup> for Zcash builds on the PGP<sup>*</sup> for Crypto convening series and narrows the focus to Zcash, privacy technology, and policy work that can meet both civil-liberties and compliance needs.</p>
+            <p class="mt-6 text-sm leading-6 text-brand-cloud/80">More details, programming, and participation information will be published here shortly.</p>
+          </div>
+        </div>
+
+        <footer class="border-t border-white/10 pt-6 text-sm text-brand-cloud">
+          <p>&copy; <span id="year"></span> PGP<sup>*</sup> for Zcash. All Rights Reserved.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
