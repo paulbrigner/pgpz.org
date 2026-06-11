@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <link href="/favicon.ico" rel="icon" type="image/x-icon"/>
+  <title>PGPZ Coalition | PGP* for Zcash</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            'brand-navy': '#0b0b43',
+            'brand-denim': '#4377f3',
+            'brand-lavender': '#62608c',
+            'brand-cloud': '#c1c5e2',
+            'brand-ice': '#fafafc',
+            'zcash-gold': '#F5A800',
+            'ink': '#14142f',
+            'muted': '#4d4f6d'
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .hero-sheen {
+      background: radial-gradient(circle at 22% 18%, rgba(245, 168, 0, 0.32), transparent 42%),
+                  radial-gradient(circle at 80% -12%, rgba(67, 119, 243, 0.36), transparent 44%),
+                  #121259;
+    }
+    .section-eyebrow {
+      letter-spacing: 0.3em;
+    }
+  </style>
+</head>
+<body class="bg-brand-ice text-ink antialiased">
+  <main>
+    <section class="hero-sheen min-h-screen overflow-hidden text-white">
+      <div class="mx-auto flex min-h-screen max-w-6xl flex-col justify-between px-6 py-8 md:py-10">
+        <header class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between">
+          <a href="https://pgpz.org/" class="flex items-center text-xl font-bold text-white">
+            <img src="/pgp_profile_image.png" alt="PGP* for Zcash" class="mr-3 h-10 w-10 rounded-full border border-white/30 object-cover"/>
+            <span>PGP<sup>*</sup></span>
+          </a>
+          <nav aria-label="Primary" class="flex flex-wrap items-center gap-x-5 gap-y-3 text-xs font-semibold uppercase tracking-[0.16em] text-brand-cloud">
+            <a href="https://pgpz.org/" class="border-b border-transparent pb-1 transition hover:border-zcash-gold hover:text-white">Home</a>
+            <a href="https://community.pgpz.org/" class="border-b border-transparent pb-1 transition hover:border-zcash-gold hover:text-white">Community</a>
+            <a href="https://coalition.pgpz.org/" aria-current="page" class="border-b border-zcash-gold pb-1 text-white">Coalition</a>
+            <a href="https://pgpforcrypto.org" class="border-b border-transparent pb-1 transition hover:border-zcash-gold hover:text-white">Archive</a>
+          </nav>
+        </header>
+
+        <div class="grid gap-12 py-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+          <div class="max-w-3xl">
+            <p class="section-eyebrow text-xs font-semibold uppercase text-brand-cloud/80">coalition.pgpz.org</p>
+            <h1 class="mt-5 text-4xl font-extrabold leading-tight md:text-6xl">PGPZ Coalition</h1>
+            <p class="mt-7 max-w-2xl text-lg leading-8 text-brand-cloud md:text-xl">A focused working group for policy professionals and active advocates coordinating policymaker education, advocacy strategy, and practical engagement around Zcash.</p>
+            <div class="mt-10 inline-flex rounded-full border border-zcash-gold/60 bg-zcash-gold px-6 py-3 text-sm font-extrabold uppercase tracking-[0.2em] text-brand-navy shadow-xl shadow-brand-navy/30">Coming Soon</div>
+          </div>
+
+          <div class="rounded-2xl border border-white/15 bg-white/10 p-8 shadow-2xl shadow-brand-navy/30 backdrop-blur">
+            <p class="text-xs font-semibold uppercase tracking-[0.25em] text-zcash-gold">What is Coming</p>
+            <p class="mt-4 text-lg leading-8 text-brand-cloud">The PGPZ Coalition will be a smaller, more action-oriented group within the broader PGPZ ecosystem, designed for people directly engaged in policy influence and policymaker engagement.</p>
+            <div class="mt-7 space-y-5">
+              <div>
+                <h2 class="text-sm font-bold uppercase tracking-[0.16em] text-white">Policy Professional Network</h2>
+                <p class="mt-2 text-sm leading-6 text-brand-cloud/85">A focused space for policy practitioners, advocates, and subject-matter contributors who are actively working on Zcash and privacy-preserving digital cash policy.</p>
+              </div>
+              <div>
+                <h2 class="text-sm font-bold uppercase tracking-[0.16em] text-white">Strategic Coordination</h2>
+                <p class="mt-2 text-sm leading-6 text-brand-cloud/85">A venue for aligning policymaker education, advocacy priorities, policy materials, and engagement plans across trusted participants.</p>
+              </div>
+              <div>
+                <h2 class="text-sm font-bold uppercase tracking-[0.16em] text-white">Practical Engagement</h2>
+                <p class="mt-2 text-sm leading-6 text-brand-cloud/85">Support for coordinated outreach that clearly explains Zcash, privacy-preserving compliance, and the public-interest case for digital cash.</p>
+              </div>
+            </div>
+            <p class="mt-7 text-sm leading-6 text-brand-cloud/80">Participation details, working norms, and initial policy workstreams will be published here shortly.</p>
+          </div>
+        </div>
+
+        <footer class="border-t border-white/10 pt-6 text-sm text-brand-cloud">
+          <p>&copy; <span id="year"></span> PGP<sup>*</sup> for Zcash. All Rights Reserved.</p>
+        </footer>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
