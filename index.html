@@ -64,13 +64,14 @@
 </head>
 <body class="bg-brand-ice text-ink antialiased">
   <header class="absolute inset-x-0 top-0 z-20">
-    <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-      <a href="/" class="flex items-center text-lg font-bold text-white">
-        <img src="pgp_profile_image.png" alt="PGP* for Zcash" class="mr-3 h-10 w-10 rounded-full border border-white/30 object-cover"/>
+    <div class="mx-auto flex max-w-6xl flex-col items-start gap-4 px-6 py-5 md:gap-5 md:py-6 xl:flex-row xl:items-center xl:justify-between">
+      <a href="/" class="flex shrink-0 items-center whitespace-nowrap text-lg font-bold text-white">
+        <img src="pgp_profile_image.png" alt="PGP* for Zcash" class="mr-3 h-10 w-10 shrink-0 rounded-full border border-white/30 object-cover"/>
         <span>PGP<sup>*</sup> for Zcash</span>
       </a>
-      <nav aria-label="Primary navigation" class="hidden items-center gap-6 text-xs font-bold uppercase tracking-[0.22em] text-brand-cloud md:flex">
+      <nav aria-label="Primary navigation" class="flex max-w-full flex-wrap items-center gap-x-4 gap-y-2 whitespace-nowrap text-[0.68rem] font-bold uppercase tracking-[0.14em] text-brand-cloud sm:gap-x-5 sm:text-xs sm:tracking-[0.18em] xl:justify-end">
         <a class="transition hover:text-white" href="#privacy">Privacy</a>
+        <a class="transition hover:text-white" href="#pgpz-network">Network</a>
         <a class="transition hover:text-white" href="#priorities">Priorities</a>
         <a class="transition hover:text-white" href="#zcash">Zcash</a>
         <a class="transition hover:text-white" href="https://community.pgpz.org">Community</a>
@@ -81,7 +82,7 @@
   </header>
 
   <main>
-    <section class="hero-visual flex min-h-[86svh] items-center overflow-hidden px-6 pb-16 pt-28 text-white">
+    <section class="hero-visual flex min-h-[86svh] items-center overflow-hidden px-6 pb-16 pt-44 text-white md:pt-40 xl:pt-28">
       <div class="mx-auto w-full max-w-6xl">
         <div class="max-w-3xl">
           <p class="section-eyebrow text-xs font-semibold uppercase text-brand-cloud">Pretty Good Policy</p>
@@ -143,6 +144,49 @@
             PGPZ creates a place for thoughtful participation, collaboration, and steady community leadership.
           </p>
         </article>
+      </div>
+    </section>
+
+    <section id="pgpz-network" class="bg-white px-6 py-16 md:py-20">
+      <div class="mx-auto max-w-6xl">
+        <div class="max-w-3xl">
+          <p class="section-eyebrow text-xs font-bold uppercase text-brand-denim">PGPZ Network</p>
+          <h2 class="mt-4 text-3xl font-extrabold leading-tight md:text-4xl">Two connected spaces for Zcash policy engagement.</h2>
+          <p class="mt-5 text-base leading-8 text-muted">
+            PGPZ is developing both a broad community home and a focused coalition so people can engage at the level that matches their interest, expertise, and capacity.
+          </p>
+        </div>
+        <div class="mt-10 grid gap-5 lg:grid-cols-2">
+          <article class="quiet-card p-6 md:p-7">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h3 class="text-2xl font-extrabold">PGPZ Community</h3>
+              <a class="rounded-full border border-zcash-gold/60 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:bg-zcash-gold-soft" href="https://community.pgpz.org">Visit Community</a>
+            </div>
+            <p class="mt-5 text-base leading-8 text-muted">
+              The PGPZ Community is the broader home for Zcash policy awareness: updates, resources, programming information, and ways for people to follow and support policy engagement around Zcash.
+            </p>
+            <div class="mt-6 grid gap-3 sm:grid-cols-3">
+              <div class="rounded-lg border border-brand-cloud/40 bg-brand-ice p-4 text-sm font-semibold leading-6">Stay informed</div>
+              <div class="rounded-lg border border-brand-cloud/40 bg-brand-ice p-4 text-sm font-semibold leading-6">Access resources</div>
+              <div class="rounded-lg border border-brand-cloud/40 bg-brand-ice p-4 text-sm font-semibold leading-6">Support engagement</div>
+            </div>
+          </article>
+          <article class="quiet-card border-zcash-gold/40 bg-brand-navy p-6 text-white md:p-7">
+            <div class="flex flex-wrap items-center justify-between gap-3">
+              <h3 class="text-2xl font-extrabold">PGPZ Coalition</h3>
+              <a class="rounded-full border border-zcash-gold/70 bg-zcash-gold px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:bg-zcash-gold-soft" href="https://coalition.pgpz.org">Visit Coalition</a>
+            </div>
+            <p class="mt-5 text-base leading-8 text-brand-cloud">
+              The PGPZ Coalition is for people who want to go beyond awareness and actively help shape the policy environment affecting Zcash. Every Coalition member is also part of the Community.
+            </p>
+            <p class="mt-4 text-base leading-8 text-brand-cloud">
+              The Coalition is a smaller, action-oriented working group for policy professionals, advocates, builders, researchers, and community members coordinating strategy, policymaker education, policy response, and advocacy for the benefit of Zcash.
+            </p>
+          </article>
+        </div>
+        <div class="mt-6 rounded-lg border-l-4 border-zcash-gold bg-zcash-gold-soft/40 p-5 text-base font-semibold leading-8 text-brand-navy">
+          In short: the Community helps more people stay informed and connected; the Coalition organizes people who want to participate directly in policy advocacy and coordination.
+        </div>
       </div>
     </section>
 
