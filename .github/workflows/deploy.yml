@@ -4,21 +4,40 @@ on:
   push:
     branches: [ main ]
 
+concurrency:
+  group: pgpz-org-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
 
+    - name: Validate site
+      run: node scripts/validate-site.mjs
+
+    - name: Prepare public site
+      run: |
+        mkdir -p _site
+        cp index.html 404.html favicon.ico robots.txt sitemap.xml _site/
+        cp -R assets community coalition _site/
+
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v4
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: us-east-1  # Your region
+        aws-region: us-east-1
 
-    - name: Sync to S3
-      run: aws s3 sync . s3://pgpz.org --delete --exclude ".git/*"
+    - name: Sync assets to S3
+      run: aws s3 sync _site/assets/ s3://pgpz.org/assets/ --delete --only-show-errors --cache-control "public,max-age=86400"
+
+    - name: Sync pages to S3
+      run: aws s3 sync _site/ s3://pgpz.org --delete --only-show-errors --exclude "assets/*" --cache-control "public,max-age=300"
 
     - name: Invalidate CloudFront
       run: aws cloudfront create-invalidation --distribution-id E1OPCMWT4I5SHU --paths "/*"

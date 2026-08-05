@@ -1,264 +1,305 @@
 <!DOCTYPE html>
-<html class="scroll-smooth" lang="en">
+<html class="no-js" lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="PGP* for Zcash is a community-oriented policy effort focused on Zcash, financial privacy, civil liberties, and privacy-preserving digital infrastructure." name="description"/>
-  <link href="favicon.ico" rel="icon" type="image/x-icon"/>
-  <title>PGP* for Zcash</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: { sans: ['Inter', 'sans-serif'] },
-          colors: {
-            'brand-navy': '#0b0b43',
-            'brand-denim': '#2f5bd8',
-            'brand-lavender': '#62608c',
-            'brand-cloud': '#c1c5e2',
-            'brand-ice': '#fafafc',
-            'zcash-gold': '#F5A800',
-            'zcash-gold-soft': '#FFE6A3',
-            'ink': '#14142f',
-            'muted': '#4d4f6d'
-          }
-        }
-      }
-    }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Pretty Good Policy for Zcash (PGPZ) is an independent policy organization advancing practical understanding, coordination, and advocacy for Zcash and financial privacy.">
+  <meta name="theme-color" content="#0D1F20">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://pgpz.org/">
+  <link rel="icon" href="/assets/images/pgpz-favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/images/pgpz-favicon.png">
+  <link rel="alternate icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Pretty Good Policy for Zcash">
+  <meta property="og:title" content="Pretty Good Policy for Zcash | PGPZ">
+  <meta property="og:description" content="Independent policy work for Zcash, financial privacy, and practical public-interest outcomes.">
+  <meta property="og:url" content="https://pgpz.org/">
+  <meta property="og:image" content="https://pgpz.org/assets/images/pgpz-social-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="PGPZ — Pretty Good Policy for Zcash — Privacy, participation, and practical outcomes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Pretty Good Policy for Zcash | PGPZ">
+  <meta name="twitter:description" content="Independent policy work for Zcash, financial privacy, and practical public-interest outcomes.">
+  <meta name="twitter:image" content="https://pgpz.org/assets/images/pgpz-social-card.png">
+  <meta name="twitter:image:alt" content="PGPZ — Pretty Good Policy for Zcash — Privacy, participation, and practical outcomes">
+  <title>Pretty Good Policy for Zcash | PGPZ</title>
+  <script>document.documentElement.classList.replace('no-js', 'js');</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Pretty Good Policy for Zcash",
+    "alternateName": "PGPZ",
+    "url": "https://pgpz.org/",
+    "description": "An independent policy organization advancing practical understanding, coordination, and advocacy for Zcash and financial privacy."
+  }
   </script>
-  <style>
-    .hero-visual {
-      background-image:
-        linear-gradient(90deg, rgba(11, 11, 67, 0.98) 0%, rgba(11, 11, 67, 0.92) 44%, rgba(11, 11, 67, 0.58) 100%),
-        url("pgp_profile_image.png");
-      background-position: center, right -14vw center;
-      background-repeat: no-repeat;
-      background-size: cover, min(64vw, 760px);
-    }
-    .section-eyebrow {
-      letter-spacing: 0.28em;
-    }
-    .quiet-card {
-      border: 1px solid rgba(98, 96, 140, 0.18);
-      border-radius: 0.5rem;
-      background: rgba(255, 255, 255, 0.86);
-      box-shadow: 0 18px 36px -30px rgba(20, 20, 47, 0.34);
-    }
-    .gold-rule {
-      background: linear-gradient(90deg, #F5A800, rgba(245, 168, 0, 0));
-    }
-    @media (max-width: 767px) {
-      .hero-visual {
-        background-image:
-          linear-gradient(180deg, rgba(11, 11, 67, 0.98) 0%, rgba(11, 11, 67, 0.92) 62%, rgba(11, 11, 67, 0.72) 100%),
-          url("pgp_profile_image.png");
-        background-position: center, right -34vw bottom -24vw;
-        background-size: cover, 112vw;
-      }
-    }
-  </style>
 </head>
-<body class="bg-brand-ice text-ink antialiased">
-  <header class="absolute inset-x-0 top-0 z-20">
-    <div class="mx-auto flex max-w-6xl flex-col items-start gap-4 px-6 py-5 md:gap-5 md:py-6 xl:flex-row xl:items-center xl:justify-between">
-      <a href="/" class="flex shrink-0 items-center whitespace-nowrap text-lg font-bold text-white">
-        <img src="pgp_profile_image.png" alt="PGP* for Zcash" class="mr-3 h-10 w-10 shrink-0 rounded-full border border-white/30 object-cover"/>
-        <span>PGP<sup>*</sup> for Zcash</span>
-      </a>
-      <nav aria-label="Primary navigation" class="flex max-w-full flex-wrap items-center gap-x-4 gap-y-2 whitespace-nowrap text-[0.68rem] font-bold uppercase tracking-[0.14em] text-brand-cloud sm:gap-x-5 sm:text-xs sm:tracking-[0.18em] xl:justify-end">
-        <a class="transition hover:text-white" href="#privacy">Privacy</a>
-        <a class="transition hover:text-white" href="#pgpz-network">Network</a>
-        <a class="transition hover:text-white" href="#priorities">Priorities</a>
-        <a class="transition hover:text-white" href="#zcash">Zcash</a>
-        <a class="transition hover:text-white" href="https://community.pgpz.org">Community</a>
-        <a class="transition hover:text-white" href="https://coalition.pgpz.org">Coalition</a>
-        <a class="transition hover:text-white" href="https://pgpforcrypto.org">Archive</a>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner shell">
+      <div class="brand-signature">
+        <img src="/assets/brand/pgpz-primary-on-dark-2048w.png" width="2048" height="891" alt="">
+        <a class="brand-signature__home" href="/" aria-label="Pretty Good Policy for Zcash (PGPZ) home"><span class="sr-only">Pretty Good Policy for Zcash (PGPZ) home</span></a>
+        <a class="brand-signature__zcash" href="https://z.cash/" aria-label="Official Zcash website"><span class="sr-only">Official Zcash website</span></a>
+      </div>
+
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="primary-navigation">
+        <span class="nav-toggle__bars" aria-hidden="true"></span>
+        <span class="nav-toggle__label">Menu</span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+        <ul class="site-nav__links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#pgpz-network">Network</a></li>
+          <li><a href="#priorities">Priorities</a></li>
+          <li><a class="site-nav__cta" href="https://community.pgpz.org/">Community</a></li>
+        </ul>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero-visual flex min-h-[86svh] items-center overflow-hidden px-6 pb-16 pt-44 text-white md:pt-40 xl:pt-28">
-      <div class="mx-auto w-full max-w-6xl">
-        <div class="max-w-3xl">
-          <p class="section-eyebrow text-xs font-semibold uppercase text-brand-cloud">Pretty Good Policy</p>
-          <h1 class="mt-5 text-5xl font-extrabold leading-tight md:text-7xl">PGP<sup>*</sup> for Zcash</h1>
-          <p class="mt-7 max-w-2xl text-lg leading-8 text-brand-cloud md:text-xl">
-            A community-oriented effort helping policymakers, regulators, industry stakeholders, and ecosystem partners understand Zcash and advance policy that protects financial privacy.
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <img class="hero__motif" src="/assets/brand/pgpz-circle-motif-on-dark-2400w.png" width="2400" height="1350" alt="">
+      <div class="hero__inner shell">
+        <div class="hero__copy">
+          <p class="eyebrow eyebrow--light">Independent policy work for Zcash</p>
+          <h1 id="hero-title">Policy built for privacy, participation, and practical outcomes.</h1>
+          <p class="hero__lede">
+            Pretty Good Policy for Zcash (PGPZ) helps policymakers, regulators, industry stakeholders, and ecosystem participants understand Zcash and advance workable policy that protects financial privacy.
           </p>
-          <div class="mt-9 flex flex-wrap gap-3">
-            <a class="rounded-full border border-zcash-gold/70 bg-zcash-gold px-5 py-3 text-xs font-extrabold uppercase tracking-[0.22em] text-brand-navy transition hover:bg-zcash-gold-soft" href="https://community.pgpz.org">Community</a>
-            <a class="rounded-full border border-white/30 px-5 py-3 text-xs font-bold uppercase tracking-[0.22em] text-brand-cloud transition hover:border-white/60 hover:text-white" href="https://coalition.pgpz.org">Coalition</a>
+          <div class="button-row">
+            <a class="button button--gold" href="https://community.pgpz.org/">Explore the Community</a>
+            <a class="button button--outline" href="https://coalition.pgpz.org/">Visit the Coalition</a>
           </div>
+        </div>
+
+        <div class="hero__system" aria-hidden="true">
+          <span class="orbit orbit--one"></span>
+          <span class="orbit orbit--two"></span>
+          <span class="orbit orbit--three"></span>
+          <span class="orbit__core">PGPZ</span>
+          <span class="orbit__label orbit__label--one">Understand</span>
+          <span class="orbit__label orbit__label--two">Convene</span>
+          <span class="orbit__label orbit__label--three">Advocate</span>
         </div>
       </div>
     </section>
 
-    <section id="privacy" class="bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-start">
+    <section class="principles" aria-label="How PGPZ works">
+      <div class="principles__inner shell">
+        <div class="principle">
+          <span class="principle__number">01</span>
+          <span><strong>Clear</strong><span>Make complex policy and technology understandable.</span></span>
+        </div>
+        <div class="principle">
+          <span class="principle__number">02</span>
+          <span><strong>Credible</strong><span>Ground engagement in evidence and practical consequences.</span></span>
+        </div>
+        <div class="principle">
+          <span class="principle__number">03</span>
+          <span><strong>Pragmatic</strong><span>Focus on workable outcomes for privacy and participation.</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="about-grid shell">
         <div>
-          <p class="section-eyebrow text-xs font-bold uppercase text-brand-denim">Financial Privacy</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight md:text-4xl">Privacy keeps digital finance safe, practical, and trustworthy.</h2>
-          <div class="gold-rule mt-6 h-1 w-40 rounded-full"></div>
+          <p class="eyebrow">About PGPZ</p>
+          <h2 class="section-heading" id="about-title">An independent policy organization for the Zcash ecosystem.</h2>
+          <p class="section-intro">
+            PGPZ supports broader understanding and responsible adoption of Zcash by translating technical systems into useful policy context and organizing informed, credible engagement.
+          </p>
         </div>
-        <div class="space-y-5 text-base leading-8 text-muted">
+        <article class="statement">
+          <h3 class="statement__title">Privacy needs a practical voice in public policy.</h3>
           <p>
-            Financial privacy helps people and businesses protect themselves from theft, harassment, discrimination, and unwanted surveillance.
+            PGPZ brings together education, community participation, policy analysis, and advocacy so people can engage with shared context while preserving distinct roles and perspectives.
           </p>
           <p>
-            As financial services become more digital and global, banks, payment companies, platforms, and third parties collect and analyze far more transaction data. A single exposed data trail can reveal spending patterns, income, location, and relationships at scale.
-          </p>
-          <div class="grid gap-3 pt-2 md:grid-cols-3">
-            <div class="quiet-card p-4 text-sm leading-6">A donor may want to support a political cause without public exposure.</div>
-            <div class="quiet-card p-4 text-sm leading-6">A patient may need sensitive medical supplies without wide visibility.</div>
-            <div class="quiet-card p-4 text-sm leading-6">A business may need to keep vendor payments and payroll confidential.</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="px-6 py-16 md:py-20">
-      <div class="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-        <article class="quiet-card p-6 md:p-8">
-          <p class="section-eyebrow text-xs font-bold uppercase text-brand-denim">About PGPZ</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight">Pretty Good Policy for Zcash.</h2>
-          <div class="mt-6 space-y-4 text-base leading-8 text-muted">
-            <p>
-              PGP<sup>*</sup> for Zcash, or PGPZ, is focused on supporting the broader adoption of Zcash.
-            </p>
-            <p>
-              PGPZ educates stakeholders, makes Zcash more understandable and accessible in everyday settings, and promotes policy that supports Zcash ecosystem development and growth.
-            </p>
-          </div>
-        </article>
-        <article class="quiet-card bg-brand-navy p-6 text-white md:p-8">
-          <p class="section-eyebrow text-xs font-bold uppercase text-zcash-gold">Why It Matters</p>
-          <p class="mt-5 text-xl leading-9 text-brand-cloud">
-            Zcash has an important role to play in the digital asset ecosystem because it offers a practical path toward privacy, accessibility, and global use.
-          </p>
-          <p class="mt-5 text-sm leading-7 text-brand-cloud/80">
-            PGPZ creates a place for thoughtful participation, collaboration, and steady community leadership.
+            The aim is straightforward: help decision-makers understand what privacy-preserving digital cash does, why it matters, and how thoughtful policy can protect both civil liberties and legitimate public interests.
           </p>
         </article>
       </div>
     </section>
 
-    <section id="pgpz-network" class="bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <div class="max-w-3xl">
-          <p class="section-eyebrow text-xs font-bold uppercase text-brand-denim">PGPZ Network</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight md:text-4xl">Two connected spaces for Zcash policy engagement.</h2>
-          <p class="mt-5 text-base leading-8 text-muted">
-            PGPZ is developing both a broad community home and a focused coalition so people can engage at the level that matches their interest, expertise, and capacity.
-          </p>
-        </div>
-        <div class="mt-10 grid gap-5 lg:grid-cols-2">
-          <article class="quiet-card p-6 md:p-7">
-            <div class="flex flex-wrap items-center justify-between gap-3">
-              <h3 class="text-2xl font-extrabold">PGPZ Community</h3>
-              <a class="rounded-full border border-zcash-gold/60 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:bg-zcash-gold-soft" href="https://community.pgpz.org">Visit Community</a>
-            </div>
-            <p class="mt-5 text-base leading-8 text-muted">
-              The PGPZ Community is the broader home for Zcash policy awareness: updates, resources, programming information, and ways for people to follow and support policy engagement around Zcash.
-            </p>
-            <div class="mt-6 grid gap-3 sm:grid-cols-3">
-              <div class="rounded-lg border border-brand-cloud/40 bg-brand-ice p-4 text-sm font-semibold leading-6">Stay informed</div>
-              <div class="rounded-lg border border-brand-cloud/40 bg-brand-ice p-4 text-sm font-semibold leading-6">Access resources</div>
-              <div class="rounded-lg border border-brand-cloud/40 bg-brand-ice p-4 text-sm font-semibold leading-6">Support engagement</div>
-            </div>
-          </article>
-          <article class="quiet-card border-zcash-gold/40 bg-brand-navy p-6 text-white md:p-7">
-            <div class="flex flex-wrap items-center justify-between gap-3">
-              <h3 class="text-2xl font-extrabold">PGPZ Coalition</h3>
-              <a class="rounded-full border border-zcash-gold/70 bg-zcash-gold px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-brand-navy transition hover:bg-zcash-gold-soft" href="https://coalition.pgpz.org">Visit Coalition</a>
-            </div>
-            <p class="mt-5 text-base leading-8 text-brand-cloud">
-              The PGPZ Coalition is for people who want to go beyond awareness and actively help shape the policy environment affecting Zcash. Every Coalition member is also part of the Community.
-            </p>
-            <p class="mt-4 text-base leading-8 text-brand-cloud">
-              The Coalition is a smaller, action-oriented working group for policy professionals, advocates, builders, researchers, and community members coordinating strategy, policymaker education, policy response, and advocacy for the benefit of Zcash.
-            </p>
-          </article>
-        </div>
-        <div class="mt-6 rounded-lg border-l-4 border-zcash-gold bg-zcash-gold-soft/40 p-5 text-base font-semibold leading-8 text-brand-navy">
-          In short: the Community helps more people stay informed and connected; the Coalition organizes people who want to participate directly in policy advocacy and coordination.
-        </div>
-      </div>
-    </section>
-
-    <section id="priorities" class="bg-white px-6 py-16 md:py-20">
-      <div class="mx-auto max-w-6xl">
-        <div class="max-w-3xl">
-          <p class="section-eyebrow text-xs font-bold uppercase text-brand-denim">Top Priorities</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight md:text-4xl">One coordinated policy vehicle for Zcash.</h2>
-          <p class="mt-5 text-base leading-8 text-muted">
-            PGPZ connects education, global advocacy, civil liberties, and policy response so the ecosystem can move with shared context.
-          </p>
-        </div>
-        <div class="mt-10 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-          <article class="quiet-card p-5">
-            <p class="text-sm font-extrabold text-zcash-gold">01</p>
-            <h3 class="mt-3 text-xl font-bold">Primary policy contact</h3>
-            <p class="mt-3 text-sm leading-7 text-muted">Establish PGPZ as the clear home for policymakers, regulators, and industry stakeholders seeking to learn about Zcash.</p>
-          </article>
-          <article class="quiet-card p-5">
-            <p class="text-sm font-extrabold text-zcash-gold">02</p>
-            <h3 class="mt-3 text-xl font-bold">Global advocacy</h3>
-            <p class="mt-3 text-sm leading-7 text-muted">Move beyond scattershot outreach by coordinating through one vehicle and speaking with one voice.</p>
-          </article>
-          <article class="quiet-card p-5">
-            <p class="text-sm font-extrabold text-zcash-gold">03</p>
-            <h3 class="mt-3 text-xl font-bold">Civil liberties</h3>
-            <p class="mt-3 text-sm leading-7 text-muted">Advance the case for privacy-preserving infrastructure as blockchain adoption expands into mainstream systems.</p>
-          </article>
-          <article class="quiet-card p-5">
-            <p class="text-sm font-extrabold text-zcash-gold">04</p>
-            <h3 class="mt-3 text-xl font-bold">Policy response</h3>
-            <p class="mt-3 text-sm leading-7 text-muted">Promote Zcash ecosystem growth while responding to policy that could inhibit privacy-preserving networks.</p>
-          </article>
-          <article class="quiet-card p-5">
-            <p class="text-sm font-extrabold text-zcash-gold">05</p>
-            <h3 class="mt-3 text-xl font-bold">Protect developers</h3>
-            <p class="mt-3 text-sm leading-7 text-muted">Defend the principle that writing, publishing, or maintaining non-custodial privacy software does not make developers money transmitters or responsible for third-party misuse, and push for clear safe harbors, due process, and limits on enforcement.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="zcash" class="px-6 py-16 md:py-20">
-      <div class="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
-        <div class="mx-auto max-w-sm lg:mx-0">
-          <img src="pgp_profile_image.png" alt="PGP* for Zcash mark" class="w-full rounded-lg border border-brand-cloud/40 bg-white object-cover shadow-2xl shadow-brand-navy/10"/>
-        </div>
+    <section class="section section--evergreen" id="privacy" aria-labelledby="privacy-title">
+      <div class="privacy-grid shell">
         <div>
-          <p class="section-eyebrow text-xs font-bold uppercase text-brand-denim">About Zcash</p>
-          <h2 class="mt-4 text-3xl font-extrabold leading-tight md:text-4xl">A cryptocurrency built for privacy.</h2>
-          <p class="mt-6 text-base leading-8 text-muted">
-            Zcash is a cryptocurrency and blockchain built to let people send value with strong privacy protections. Like Bitcoin, it has a fixed supply and a decentralized network, but it uses zero-knowledge cryptography so shielded transactions can be verified without publicly revealing the sender, recipient, or amount.
+          <p class="eyebrow eyebrow--light">Financial privacy</p>
+          <h2 class="section-heading" id="privacy-title">Privacy keeps digital finance safe, practical, and trustworthy.</h2>
+        </div>
+        <div class="privacy-copy">
+          <p>
+            Financial privacy helps people and businesses protect themselves from theft, harassment, discrimination, and unwanted surveillance. As finance becomes more digital, exposed transaction data can reveal spending, income, location, and relationships at scale.
           </p>
-          <div class="mt-7 grid gap-3 md:grid-cols-3">
-            <div class="quiet-card p-4 text-sm font-semibold leading-6">Fixed supply and decentralized network.</div>
-            <div class="quiet-card p-4 text-sm font-semibold leading-6">Zero-knowledge cryptography for shielded transfers.</div>
-            <div class="quiet-card p-4 text-sm font-semibold leading-6">Selective disclosure with public-chain auditability.</div>
+          <ul class="case-list">
+            <li>
+              <span class="case-list__icon" aria-hidden="true">01</span>
+              <span><strong>Personal safety</strong>A donor may want to support a political cause without creating a public target.</span>
+            </li>
+            <li>
+              <span class="case-list__icon" aria-hidden="true">02</span>
+              <span><strong>Sensitive needs</strong>A patient may need medical supplies without exposing private health information.</span>
+            </li>
+            <li>
+              <span class="case-list__icon" aria-hidden="true">03</span>
+              <span><strong>Business confidentiality</strong>An organization may need to protect vendor payments, payroll, and strategy.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--white" id="pgpz-network" aria-labelledby="network-title">
+      <div class="shell">
+        <div class="network-header">
+          <div>
+            <p class="eyebrow">The PGPZ network</p>
+            <h2 class="section-heading section-heading--wide" id="network-title">Two connected spaces for Zcash policy engagement.</h2>
           </div>
+          <p class="section-intro">
+            Choose the level of participation that matches your interest, expertise, and capacity. Coalition members are also part of the broader Community.
+          </p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card">
+            <p class="program-card__label">Open participation</p>
+            <h3>PGPZ Community</h3>
+            <p>
+              The broader home for Zcash policy awareness, public updates, educational resources, programming, and practical ways to follow and support policy engagement.
+            </p>
+            <a class="button button--dark" href="https://community.pgpz.org/">Enter the Community</a>
+          </article>
+
+          <article class="program-card program-card--coalition">
+            <p class="program-card__label">Action-oriented working group</p>
+            <h3>PGPZ Coalition</h3>
+            <p>
+              A focused group for policy professionals, advocates, builders, researchers, and community members coordinating strategy, policymaker education, policy response, and advocacy.
+            </p>
+            <a class="button button--gold" href="https://coalition.pgpz.org/">Visit the Coalition</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="priorities" aria-labelledby="priorities-title">
+      <div class="priorities-layout shell">
+        <div>
+          <p class="eyebrow">What PGPZ does</p>
+          <h2 class="section-heading" id="priorities-title">A coordinated policy home for Zcash.</h2>
+          <p class="section-intro">
+            The work connects stakeholder education, global advocacy, civil liberties, policy response, and developer protections.
+          </p>
+        </div>
+
+        <ol class="priority-list">
+          <li>
+            <span class="priority-list__number">01</span>
+            <strong>Stakeholder education</strong>
+            <p>Give policymakers, regulators, and industry stakeholders clear, useful context about Zcash.</p>
+          </li>
+          <li>
+            <span class="priority-list__number">02</span>
+            <strong>Global coordination</strong>
+            <p>Connect policy work across jurisdictions while respecting local knowledge, needs, and strategy.</p>
+          </li>
+          <li>
+            <span class="priority-list__number">03</span>
+            <strong>Civil liberties</strong>
+            <p>Advance the public-interest case for privacy-preserving infrastructure as digital finance expands.</p>
+          </li>
+          <li>
+            <span class="priority-list__number">04</span>
+            <strong>Policy response</strong>
+            <p>Help the ecosystem understand and respond constructively to policy affecting privacy-preserving networks.</p>
+          </li>
+          <li>
+            <span class="priority-list__number">05</span>
+            <strong>Developer protections</strong>
+            <p>Support clear rules, due process, and appropriate safe harbors for people who build and maintain non-custodial privacy software.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section--white" id="zcash" aria-labelledby="zcash-title">
+      <div class="zcash-grid shell">
+        <div class="zcash-visual" aria-hidden="true">
+          <span class="zcash-visual__ring"></span>
+          <span class="zcash-visual__ring"></span>
+          <span class="zcash-visual__core">Zcash</span>
+        </div>
+        <div class="zcash-copy">
+          <p class="eyebrow">About Zcash</p>
+          <h2 class="section-heading" id="zcash-title">Digital money with strong privacy protections.</h2>
+          <p>
+            Zcash is a decentralized digital currency that uses zero-knowledge cryptography to support shielded transactions. The network can verify a valid transfer without publicly revealing the sender, recipient, or amount.
+          </p>
+          <div class="feature-row">
+            <div>Fixed supply and a decentralized network</div>
+            <div>Shielded transfers using zero-knowledge proofs</div>
+            <div>Selective disclosure when context requires it</div>
+          </div>
+          <div class="button-row">
+            <a class="button button--teal" href="https://z.cash/">Learn about Zcash</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="engage-title">
+      <div class="cta-panel shell">
+        <p class="eyebrow eyebrow--light">Choose your path</p>
+        <h2 id="engage-title">Stay informed—or help shape the work.</h2>
+        <p>
+          Join the PGPZ Community for updates, resources, and public participation. Visit the PGPZ Coalition if you are ready for active policy coordination and advocacy.
+        </p>
+        <div class="button-row">
+          <a class="button button--gold" href="https://community.pgpz.org/">Join the Community</a>
+          <a class="button button--outline" href="https://coalition.pgpz.org/">Explore the Coalition</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="border-t border-brand-cloud/30 bg-white px-6 py-8 text-sm text-muted">
-    <div class="mx-auto flex max-w-6xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
-      <p>&copy; <span id="year"></span> PGP<sup>*</sup> for Zcash. All Rights Reserved.</p>
-      <a class="font-bold text-brand-denim underline-offset-4 hover:underline" href="https://pgpforcrypto.org">PGP* for Crypto Archive</a>
+  <footer class="site-footer">
+    <div class="site-footer__main shell">
+      <div class="brand-signature">
+        <img src="/assets/brand/pgpz-primary-on-dark-2048w.png" width="2048" height="891" alt="">
+        <a class="brand-signature__home" href="/" aria-label="Pretty Good Policy for Zcash (PGPZ) home"><span class="sr-only">Pretty Good Policy for Zcash (PGPZ) home</span></a>
+        <a class="brand-signature__zcash" href="https://z.cash/" aria-label="Official Zcash website"><span class="sr-only">Official Zcash website</span></a>
+      </div>
+      <div class="site-footer__content">
+        <p class="site-footer__statement">
+          Pretty Good Policy for Zcash (PGPZ) is an independent organization. It is not an official Zcash or Zcash Foundation website, service, or product, and is not affiliated with or endorsed by the Zcash Foundation.
+        </p>
+        <nav class="site-footer__links" aria-label="Footer navigation">
+          <a href="https://community.pgpz.org/">PGPZ Community</a>
+          <a href="https://coalition.pgpz.org/">PGPZ Coalition</a>
+          <a href="https://z.cash/">Official Zcash website</a>
+          <a href="https://pgpforcrypto.org/">PGP* for Crypto Archive</a>
+        </nav>
+      </div>
+    </div>
+    <div class="site-footer__legal shell">
+      <p>&copy; <span data-current-year>2026</span> Pretty Good Policy for Zcash. All rights reserved.</p>
+      <a href="#main-content">Back to top</a>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <script src="/assets/js/site.js" defer></script>
 </body>
 </html>
