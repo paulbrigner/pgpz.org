@@ -13,6 +13,15 @@ const textFiles = [
   'sitemap.xml',
 ];
 
+const profileImageFiles = [
+  'assets/images/people/divij-pandya.webp',
+  'assets/images/people/paul-brigner.jpg',
+  'assets/images/people/michele-korver.webp',
+  'assets/images/people/dan-spuller.jpg',
+  'assets/images/people/julie-stitzel.jpg',
+  'assets/images/people/jw-verret.jpg',
+];
+
 const requiredFiles = [
   ...textFiles,
   'favicon.ico',
@@ -20,6 +29,7 @@ const requiredFiles = [
   'assets/brand/pgpz-circle-motif-on-dark-2400w.png',
   'assets/images/pgpz-social-card-v4.png',
   'assets/images/pgpz-favicon.png',
+  ...profileImageFiles,
   'assets/fonts/Inter-Regular.ttf',
   'assets/fonts/Inter-Medium.ttf',
   'assets/fonts/Inter-Semibold.ttf',
@@ -47,6 +57,14 @@ for (const [file, expected] of Object.entries(expectedBrandChecksums)) {
   const actual = createHash('sha256').update(readFileSync(join(root, file))).digest('hex');
   if (actual !== expected) {
     failures.push(`Brand asset checksum mismatch: ${file}`);
+  }
+}
+
+for (const file of profileImageFiles) {
+  if (!existsSync(join(root, file))) continue;
+  const size = readFileSync(join(root, file)).byteLength;
+  if (size > 150_000) {
+    failures.push(`Profile image exceeds the 150 KB display budget: ${file}`);
   }
 }
 
@@ -104,6 +122,18 @@ if (!home.includes('not affiliated with or endorsed by the Zcash Foundation')) {
 
 if (!home.includes('aria-label="Official Zcash website"')) {
   failures.push('Composite brand signature is missing an accessible Zcash-logo link.');
+}
+
+if (!home.includes('<details class="people-disclosure">')) {
+  failures.push('Homepage is missing the Team and Board disclosure.');
+}
+
+if (home.includes('<details class="people-disclosure" open')) {
+  failures.push('Team and Board disclosure must be collapsed by default.');
+}
+
+if ((home.match(/class="profile-card(?:\s|"|--)/g) ?? []).length !== 6) {
+  failures.push('Team and Board disclosure must contain exactly six profiles.');
 }
 
 if (failures.length > 0) {
