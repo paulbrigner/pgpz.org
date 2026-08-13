@@ -136,6 +136,18 @@ if ((home.match(/class="profile-card(?:\s|"|--)/g) ?? []).length !== 6) {
   failures.push('Team and Board disclosure must contain exactly six profiles.');
 }
 
+if ((home.match(/<details class="profile-bio">/g) ?? []).length !== 6) {
+  failures.push('Every Team and Board profile must keep its biography in a collapsed disclosure.');
+}
+
+if (!home.includes('class="profile-grid profile-grid--board"')) {
+  failures.push('Board members must use the equal-exposure profile grid.');
+}
+
+if (/profile-card--(?:featured|chairman)/.test(home)) {
+  failures.push('Board profiles must not use featured or Chairman-specific card treatment.');
+}
+
 if (failures.length > 0) {
   console.error('Site validation failed:\n');
   for (const failure of failures) console.error(`- ${failure}`);
