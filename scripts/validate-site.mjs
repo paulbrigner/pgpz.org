@@ -136,8 +136,16 @@ if ((home.match(/class="profile-card(?:\s|"|--)/g) ?? []).length !== 6) {
   failures.push('Team and Board disclosure must contain exactly six profiles.');
 }
 
-if ((home.match(/<details class="profile-bio">/g) ?? []).length !== 6) {
-  failures.push('Every Team and Board profile must keep its biography in a collapsed disclosure.');
+if (!home.includes('class="profile-card__visible-bio"')) {
+  failures.push('Executive Director profile must show its biography directly.');
+}
+
+if ((home.match(/class="profile-bio-button"/g) ?? []).length !== 5) {
+  failures.push('Every Board profile must include a bio button.');
+}
+
+if ((home.match(/class="profile-popover"/g) ?? []).length !== 5) {
+  failures.push('Every Board profile must include a non-disruptive bio popover.');
 }
 
 if (!home.includes('class="profile-grid profile-grid--board"')) {
