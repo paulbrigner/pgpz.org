@@ -28,8 +28,8 @@ const requiredFiles = [
 ];
 
 const expectedBrandChecksums = {
-  'assets/brand/pgpz-primary-on-dark-2048w.png': '19f96f07a232fb886b898eadea6562ade0c89f3585c77ba3d5c66b00f925c222',
-  'assets/brand/pgpz-circle-motif-on-dark-2400w.png': 'b498570f5781370ecc74849c03d12f8b382fc686d047f0852fbfe4bb0dcd189d',
+  'assets/brand/pgpz-primary-on-dark-2048w.png': '07faba90390e642e42fbbd4ddfc67445514738e91d474deaf843313b02b4760b',
+  'assets/brand/pgpz-circle-motif-on-dark-2400w.png': '3a288051f490eaf330a504d5eaf3df90e9ecb66d60aa7848aa35146f2bbd3872',
 };
 
 const failures = [];

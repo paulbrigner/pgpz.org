@@ -13,7 +13,7 @@ The site has no runtime framework or third-party browser dependency. Inter is se
 
 ## Brand implementation
 
-- Use the approved draft-v4 evergreen, paper, slate, teal, and gold tokens.
+- Use the released v4 evergreen, paper, slate, teal, and gold tokens.
 - Always use the complete long-form name, including its `for Zcash` ending, in site-authored text.
 - Keep the supplied composite brand artwork unchanged.
 - The transparent link area over the official Zcash roundel must continue to point to `https://z.cash/`.
