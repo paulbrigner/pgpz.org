@@ -18,7 +18,7 @@ The site has no runtime framework or third-party browser dependency. Inter is se
 - Keep the supplied composite brand artwork unchanged.
 - The transparent link area over the official Zcash roundel must continue to point to `https://z.cash/`.
 - Keep the independence and non-endorsement statement in the persistent footer.
-- Use only a PGPZ-only favicon or social asset when the official Zcash roundel cannot be hyperlinked.
+- Use the released social-package exports for social previews; use PGPZ-only artwork when the composite brandmark is not suitable.
 
 The validation script pins checksums for the exact brand-package artwork published by this site.
 

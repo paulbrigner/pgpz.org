@@ -18,7 +18,7 @@ const requiredFiles = [
   'favicon.ico',
   'assets/brand/pgpz-primary-on-dark-2048w.png',
   'assets/brand/pgpz-circle-motif-on-dark-2400w.png',
-  'assets/images/pgpz-social-card.png',
+  'assets/images/pgpz-social-card-v4.png',
   'assets/images/pgpz-favicon.png',
   'assets/fonts/Inter-Regular.ttf',
   'assets/fonts/Inter-Medium.ttf',
