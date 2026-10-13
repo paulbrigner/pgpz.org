@@ -27,7 +27,7 @@ if (menuButton && navigation) {
   });
 
   window.addEventListener('resize', () => {
-    if (window.matchMedia('(min-width: 1021px)').matches) {
+    if (window.matchMedia(document.body.classList.contains('policy-home') ? '(min-width: 901px)' : '(min-width: 1021px)').matches) {
       closeMenu();
     }
   });

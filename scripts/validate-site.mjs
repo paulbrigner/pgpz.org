@@ -9,6 +9,7 @@ const textFiles = [
   'README.md',
   'assets/css/site.css',
   'assets/js/site.js',
+  'assets/js/policy-updates.mjs',
   'robots.txt',
   'sitemap.xml',
 ];
@@ -25,6 +26,11 @@ const profileImageFiles = [
 const requiredFiles = [
   ...textFiles,
   'favicon.ico',
+  'assets/icons/bootstrap/arrow-right.svg',
+  'assets/icons/bootstrap/file-earmark-text.svg',
+  'assets/icons/bootstrap/book.svg',
+  'assets/icons/bootstrap/people.svg',
+  'assets/icons/bootstrap/LICENSE',
   'assets/brand/pgpz-primary-on-dark-2048w.png',
   'assets/brand/pgpz-circle-motif-on-dark-2400w.png',
   'assets/images/pgpz-social-card-v4.png',
@@ -92,6 +98,8 @@ for (const file of htmlFiles) {
 
     const cleanReference = reference.split(/[?#]/, 1)[0];
     if (!cleanReference) continue;
+    // These exact public routes are served by the independent policy reader origin.
+    if (['/updates', '/updates/', '/updates/sitemap.xml'].includes(cleanReference)) continue;
 
     let localPath = cleanReference.startsWith('/')
       ? cleanReference.slice(1)
@@ -154,6 +162,18 @@ if (!home.includes('class="profile-grid profile-grid--board"')) {
 
 if (/profile-card--(?:featured|chairman)/.test(home)) {
   failures.push('Board profiles must not use featured or Chairman-specific card treatment.');
+}
+
+for (const marker of ['data-featured-memo', 'data-policy-list', 'data-feed-status', 'data-feed-retry']) {
+  if (!home.includes(marker)) failures.push(`Homepage is missing policy reader hook: ${marker}`);
+}
+
+if (!home.includes('href="/updates"')) {
+  failures.push('Homepage is missing the public policy archive.');
+}
+
+if (!readFileSync(join(root, 'robots.txt'), 'utf8').includes('https://pgpz.org/updates/sitemap.xml')) {
+  failures.push('Robots file is missing the published policy sitemap.');
 }
 
 if (failures.length > 0) {
