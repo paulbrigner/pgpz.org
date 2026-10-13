@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://pgpz.org/sitemap.xml
+Sitemap: https://pgpz.org/updates/sitemap.xml
