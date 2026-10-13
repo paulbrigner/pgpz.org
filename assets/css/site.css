@@ -2280,12 +2280,12 @@ a {
 }
 
 @media (max-width: 900px) {
-  .no-js.policy-home .site-header__inner {
+  .no-js .policy-home .site-header__inner {
     flex-wrap: wrap;
     padding-block: 0.5rem 1rem;
   }
 
-  .no-js.policy-home .site-nav {
+  .no-js .policy-home .site-nav {
     width: 100%;
   }
 }
